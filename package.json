@@ -1,6 +1,6 @@
 {
   "name": "extract-codefence",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A utility to extract code from codefence blocks",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --format esm ./index.ts",
+    "build": "tsup --format esm ./index.ts --dts",
     "test": "bun test"
   },
   "keywords": [
