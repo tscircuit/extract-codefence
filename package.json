@@ -1,7 +1,26 @@
 {
   "name": "extract-codefence",
-  "module": "index.ts",
+  "version": "0.0.1",
+  "description": "A utility to extract code from codefence blocks",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup --format esm ./index.ts",
+    "test": "bun test"
+  },
+  "keywords": [
+    "codefence",
+    "markdown",
+    "extract",
+    "code"
+  ],
+  "author": "Severin Ibarluzea",
+  "license": "MIT",
   "devDependencies": {
     "@types/bun": "latest",
     "tsup": "^8.3.0"
