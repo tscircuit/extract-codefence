@@ -8,3 +8,9 @@ test("extractCodefence 1", () => {
 test("extractCodefence 2", () => {
   expect(extractCodefence("```\nconsole.log('hello')\n```")).toBe("console.log('hello')")
 })
+
+test("extractCodefence strips non-ts language tags", () => {
+  expect(extractCodefence("```js\nconsole.log('hello')\n```")).toBe("console.log('hello')")
+  expect(extractCodefence("```python\nprint('hello')\n```")).toBe("print('hello')")
+  expect(extractCodefence("```bash\nnpm install\n```")).toBe("npm install")
+})
